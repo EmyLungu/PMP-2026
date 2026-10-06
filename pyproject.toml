@@ -1,0 +1,13 @@
+[project]
+name = "pmp-2026"
+version = "0.1.0"
+description = "Laborator PMP"
+readme = "README.md"
+authors = [
+    { name = "EmyLungu", email = "lunguemy19@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "pyqt5>=5.15.11",
+]
