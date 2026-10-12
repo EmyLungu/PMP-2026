@@ -152,9 +152,9 @@ P(P1, B) = 19/20
          = 95/100
          = 95%
 
-P(P2, B) = 72/80
-         = 9/10
-         = 90%
+P(P2, B) = 16/80
+         = 1/5
+         = 20%
 
 3.2. Care disciplină are o rată de promovare mai mare în fiecare program?
 Program 1: Disciplina B
@@ -165,13 +165,13 @@ A_global = (81 + 1) / (90 + 10)
          = 82 / 100
          = 82%
 
-B_global = (19 + 72) / (20 + 80)
-         = 91 / 100
-         = 91%
+B_global = (19 + 16) / (20 + 80)
+         = 35 / 100
+         = 35%
 
 3.4. Explicaţi de ce ordinea disciplinelor se inversează atunci când agregăm datele.
 
-Nu avem un paradox Simpson, pentru că ordinea rămâne aceeași și după agregare: B este mai bună atât separat, cât și global.
+Disciplina B are majoritatea studentilor concentrati in Programul 2 (care are o rata generala de promovare mult mai mica), in timp ce Disciplina A are majoritatea studentilor in Programul 1 (care are o rata de promovare mult mai ridicata)
 
 3.5. Formulaţi fenomenul în termeni de probabilităţi condiţionate.
 
