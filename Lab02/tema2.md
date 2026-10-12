@@ -49,10 +49,9 @@ X + Y = 8 => (x, y) <=> {(2, 6), (6, 2),
 P(X+Y=8) = 5/36
 
 X + Y = 8 ∩ (X = Par ∩ Y = Par) => (x, y) <=> {(2, 6), (6, 2), (4, 4)}
-P(X + Y = 8 ∩ (X = Par ∪ Y = Par)) = 3/36 = 1/12
+P(X + Y = 8 ∩ (X = Par ∩ Y = Par)) = 3/36 = 1/12
 
-Folosim T.H. Bayes:
-P((X = Par ∪ Y = Par) | X+Y=8) = P(X+Y=8 ∩ (X = Par ∪ Y = Par)) / P(X+Y=8)
+P((X = Par ∩ Y = Par) | X+Y=8) = P((X = Par ∩ Y = Par) ∩ X+Y=8) / P(X+Y=8)
                                = 1/12  /  5/36
                                = 1/12  *  36/5
                                = 3/5
@@ -75,8 +74,8 @@ P(A ∩ B) = P(A) * P(B)
 2.
 
 30% mesaje sunt spam
-"oferta" in 80% din spam
-"oferta" in 15% din non-spam
+"oferta" in 80% din spam            P(oferta | spam)  = 80%
+"oferta" in 15% din non-spam        P(oferta | ¬spam) = 15%
 
 ---
 
@@ -98,7 +97,7 @@ P(spam | oferta) = P(oferta | spam) * P(spam) / P(oferta)
                  = 0.695652173913
 
 2.2. Presupunem că termenul „gratuit” apare în 60% dintre mesajele spam şi în 10% dintre mesajele legitime. Consid-
-erând independenţa condiţionată a apariţiei celor două cuvinte, calculaţi probabilitatea ca un mesaj care conţine
+erând independenţa condiţionată a apariţiei celor două cuvinte, calculaţi probabilitatea ca un mesaj care conţine ambele cuvinte să fie spam.
 
 P(gratuit | spam) = 60%
 P(gratuit | ¬spam) = 10%
@@ -122,7 +121,6 @@ P(oferta ∩ gratuit) = P(oferta ∩ gratuit | spam) * P(spam) + P(oferta ∩ gr
                     = 1545/10000
 
 
-ambele cuvinte să fie spam.
 2.3. Explicaţi de ce ipoteza independenţei condiţionate poate fi nerealistă.
 
 Ipoteza este nerealistă deoarece cuvintele din limbajul natural nu sunt independente.
@@ -131,12 +129,12 @@ Cuvinte precum "ofertă” și "gratuit” apar frecvent împreună în anunțur
 2.4. Propuneţi o regulă de clasificare bazată pe probabilitatea condiţionată.
 
 Mesajul este etichetat drept spam dacă:
-
-P(spam | X) = 1 - P(¬spam | X)
-
 P(spam | X) > 0.5
+unde X este multimea cuvintelor detectate precum {oferta, gratuit}
+
 putem creste limita de 0.5 daca nu vrem riscul de a clasifica gresit (ex: 0.8)
 
+P(spam | X) = 1 - P(¬spam | X)
 
 ---
 
@@ -179,4 +177,4 @@ P(promovare | A) = P(promovare | A, P1) * P(P1 | A) + P(promovare | A, P2) * P(P
 P(promovare | B) = P(promovare | B, P1) * P(P1 | B) + P(promovare | B, P2) * P(P2 | B)
 
 P(promovare | A) = 90% * 90% + 10% * 10% = 81% + 1% = 82%
-P(promovare | B) = 95% * 20% + 90% * 80% = 19% + 72% = 91%
+P(promovare | B) = 95% * 20% + 20% * 80% = 19% + 16% = 35%
